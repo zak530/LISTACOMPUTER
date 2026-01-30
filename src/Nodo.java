@@ -1,28 +1,32 @@
 public class Nodo {
 
 
-    private String value;
+
+    private Computer computer;
     private Nodo next;
-    private int valueint;
 
-    public Nodo(String value) {
-        this.value = value;
-        this.next = null;
-    }
 
-    public Nodo(int valueint) {
-        this.valueint = valueint;
-        this.next = null;
+    public Nodo(Computer computer){
+        this.computer= computer;
+        this.next=null;
     }
 
     public Nodo() {
-        this.value = null;
+        this.computer = null;
         this.next = null;
     }
 
-    public String getValue() {
-        return value;
+
+    public Computer getComputer() {
+        return computer;
     }
+
+    public void setComputer(Computer computer) {
+        this.computer = computer;
+    }
+
+
+
 
     public Nodo getNext() {
         return next;
@@ -32,22 +36,12 @@ public class Nodo {
         this.next = next;
     }
 
-    public void setValue(String value) {
-        this.value = value;
-    }
 
-    public void setValueint(int valueint) {
-        this.valueint = valueint;
-    }
-
-    public int getValueint(){
-        return valueint;
-    }
 
     @Override
     public String toString() {
-        return "Nodo{" +
-                "value='" + value +", next=" + next + '}';
+        return computer.toString();
+
     }
 
 }
