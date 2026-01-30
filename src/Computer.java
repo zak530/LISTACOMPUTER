@@ -1,4 +1,4 @@
-public class Computer {
+public class Computer implements Comparable<Computer>  {
 
     private String modello;
     private String processore;
@@ -35,8 +35,10 @@ public class Computer {
     }
 
     public int compareTo(Computer b) {
-        return Integer.compare(this.capacitaRAM, b.capacitaRAM);
-    }
+            return Integer.compare(this.capacitaRAM, b.capacitaRAM);
+        }
+
+
 
     @Override
     public String toString() {
