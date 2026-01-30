@@ -34,7 +34,9 @@ public class Computer {
         this.capacitaRAM = capacitaRAM;
     }
 
-
+    public int compareTo(Computer b) {
+        return Integer.compare(this.capacitaRAM, b.capacitaRAM);
+    }
 
     @Override
     public String toString() {
