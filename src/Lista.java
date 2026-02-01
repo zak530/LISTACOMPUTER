@@ -30,14 +30,16 @@ public class Lista {
 
 
 
-    public void inserimentoordinato( Computer computer) {
-        Nodo newNode = new Nodo();
+    public void inserimentoordinato(Computer computer) {
+        Nodo newNode = new Nodo(computer);
+
         if (head == null || computer.getCapacitaRAM() < head.getComputer().getCapacitaRAM()) {
             newNode.setNext(head);
             head = newNode;
         } else {
             Nodo current = head;
-            while (current.getNext() != null && current.getNext().getComputer().getCapacitaRAM() < computer.getCapacitaRAM()) {
+            while (current.getNext() != null &&
+                    current.getNext().getComputer().getCapacitaRAM() < computer.getCapacitaRAM()) {
                 current = current.getNext();
             }
             newNode.setNext(current.getNext());
@@ -46,6 +48,7 @@ public class Lista {
 
         size++;
     }
+
 
 
 
